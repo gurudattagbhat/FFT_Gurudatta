@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Job Application Form</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+		}
+
+		.form-box {
+			width: 100%;
+			min-height: 100vh;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		h2 {
+			margin-top: 0;
+			margin-bottom: 15px;
+		}
+
+		label {
+			display: block;
+			margin-top: 10px;
+			margin-bottom: 4px;
+		}
+
+		input,
+		select,
+		textarea {
+			width: 280px;
+			max-width: 100%;
+			padding: 6px;
+			border: 1px solid #000;
+			box-sizing: border-box;
+		}
+
+		textarea {
+			width: 320px;
+			resize: vertical;
+		}
+
+		button {
+			margin-top: 12px;
+			padding: 6px 12px;
+			border: 1px solid #000;
+			background: #fff;
+			cursor: pointer;
+		}
+
+		.edu-row {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			margin-top: 10px;
+			flex-wrap: wrap;
+		}
+
+		.edu-row span {
+			width: 70px;
+		}
+
+		.edu-row .inst {
+			width: 260px;
+		}
+
+		.edu-row .year {
+			width: 110px;
+		}
+
+		.edu-row .score {
+			width: 150px;
+		}
+	</style>
+</head>
+<body>
+	<div class="form-box">
+		<h2>Job Application Form</h2>
+
+		<form>
+			<label for="name">Full Name</label>
+			<input type="text" id="name" name="name">
+
+			<label for="dob">Date of Birth</label>
+			<input type="date" id="dob" name="dob">
+
+			<label>Gender</label>
+			<input type="radio" id="male" name="gender" value="Male" style="width:auto;">
+			<label for="male" style="display:inline; margin-right:10px;">Male</label>
+			<input type="radio" id="female" name="gender" value="Female" style="width:auto;">
+			<label for="female" style="display:inline; margin-right:10px;">Female</label>
+			<input type="radio" id="other" name="gender" value="Other" style="width:auto;">
+			<label for="other" style="display:inline;">Other</label>
+
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email">
+
+			<label for="phone">Phone</label>
+			<input type="tel" id="phone" name="phone">
+
+			<label for="altphone">Alternate Phone</label>
+			<input type="tel" id="altphone" name="altphone">
+
+			<label for="address">Address</label>
+			<textarea id="address" name="address" rows="3"></textarea>
+
+			<label for="city">City</label>
+			<input type="text" id="city" name="city">
+
+			<label for="state">State</label>
+			<input type="text" id="state" name="state">
+
+			<label for="pincode">Pincode</label>
+			<input type="text" id="pincode" name="pincode">
+
+			<label for="position">Position</label>
+			<select id="position" name="position">
+				<option value="">Select</option>
+				<option>Developer</option>
+				<option>Designer</option>
+				<option>Tester</option>
+			</select>
+
+			<label for="employment">Employment Type</label>
+			<select id="employment" name="employment">
+				<option value="">Select</option>
+				<option>Full Time</option>
+				<option>Part Time</option>
+				<option>Internship</option>
+			</select>
+
+			<label for="education">Highest Qualification</label>
+			<select id="education" name="education">
+				<option value="">Select</option>
+				<option>Diploma</option>
+				<option>Bachelor's</option>
+				<option>Master's</option>
+				<option>PhD</option>
+			</select>
+
+			<label>Educational Qualifications</label>
+			<div class="edu-row">
+				<span>10th</span>
+				<input class="inst" type="text" id="edu10" name="edu10" placeholder="Board / School">
+				<input class="year" type="number" id="edu10year" name="edu10year" placeholder="Year">
+				<input class="score" type="text" id="edu10marks" name="edu10marks" placeholder="% / CGPA">
+			</div>
+
+			<div class="edu-row">
+				<span>12th</span>
+				<input class="inst" type="text" id="edu12" name="edu12" placeholder="Board / College">
+				<input class="year" type="number" id="edu12year" name="edu12year" placeholder="Year">
+				<input class="score" type="text" id="edu12marks" name="edu12marks" placeholder="% / CGPA">
+			</div>
+
+			<div class="edu-row">
+				<span>Degree</span>
+				<input class="inst" type="text" id="degree" name="degree" placeholder="University / Institute">
+				<input class="year" type="number" id="degreeyear" name="degreeyear" placeholder="Year">
+				<input class="score" type="text" id="degreemarks" name="degreemarks" placeholder="% / CGPA">
+			</div>
+
+			<label for="experience">Experience (Years)</label>
+			<input type="number" id="experience" name="experience">
+
+			<label for="salary">Expected Salary</label>
+			<input type="number" id="salary" name="salary">
+
+			<label for="join">Available Joining Date</label>
+			<input type="date" id="join" name="join">
+
+			<label for="linkedin">LinkedIn Profile URL</label>
+			<input type="url" id="linkedin" name="linkedin">
+
+			<label for="portfolio">Portfolio URL</label>
+			<input type="url" id="portfolio" name="portfolio">
+
+			<label>Skills</label>
+			<input type="checkbox" id="skill1" name="skills" value="HTML" style="width:auto;">
+			<label for="skill1" style="display:inline; margin-right:10px;">HTML</label>
+			<input type="checkbox" id="skill2" name="skills" value="CSS" style="width:auto;">
+			<label for="skill2" style="display:inline; margin-right:10px;">CSS</label>
+			<input type="checkbox" id="skill3" name="skills" value="Java" style="width:auto;">
+			<label for="skill3" style="display:inline; margin-right:10px;">Java</label>
+			<input type="checkbox" id="skill4" name="skills" value="Python" style="width:auto;">
+			<label for="skill4" style="display:inline;">Python</label>
+
+			<label for="resume">Upload Resume</label>
+			<input type="file" id="resume" name="resume">
+
+			<label for="message">Why should we hire you?</label>
+			<textarea id="message" name="message" rows="4"></textarea>
+
+			<input type="checkbox" id="declare" name="declare" style="width:auto; margin-top:10px;">
+			<label for="declare" style="display:inline;">I confirm the details are correct.</label>
+
+			<button type="submit">Apply</button>
+		</form>
+	</div>
+</body>
+</html>
